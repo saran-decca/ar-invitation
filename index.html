@@ -1,36 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>AR Invitation</title>
-
-  <!-- A-Frame -->
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-
-  <!-- AR.js -->
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saran & Gayathri — Forever Begins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body>
 
-<body style="margin:0; overflow:hidden;">
-  <a-scene embedded arjs>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__petals" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="hero__content fade-in">
+      <p class="hero__eyebrow">Together with their families</p>
+      <h1 class="hero__names">
+        <span>Saran</span>
+        <div class="hero__ampersand" aria-hidden="true">
+          <svg viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M38 20C38 14 34 10 28 10C22 10 18 14 18 20C18 28 26 33 34 40C42 47 46 53 46 61C46 70 40 76 30 76C20 76 14 70 14 62C14 55 18 50 24 46" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M44 48L26 62" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span>Gayathri</span>
+      </h1>
+      <p class="hero__tagline"><em>Two hearts, one story, a lifetime of love</em></p>
+      <div class="hero__date-badge">
+        <time datetime="2026-05-30">May 30, 2026</time>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <span></span>
+      <span></span>
+    </div>
+  </section>
 
-    <!-- Custom Marker -->
-    <a-marker type="pattern" url="pattern-marker.patt">
+  <!-- Divider -->
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 800 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+      <line x1="0" y1="20" x2="320" y2="20" stroke="#c9a96e" stroke-width="0.5"/>
+      <g transform="translate(400,20)" fill="none" stroke="#c9a96e" stroke-width="0.8">
+        <circle cx="-48" cy="0" r="3"/>
+        <circle cx="-30" cy="0" r="4"/>
+        <path d="M-20,0 Q-10,-12 0,-6 Q10,-12 20,0 Q10,12 0,6 Q-10,12 -20,0Z"/>
+        <circle cx="30" cy="0" r="4"/>
+        <circle cx="48" cy="0" r="3"/>
+      </g>
+      <line x1="480" y1="20" x2="800" y2="20" stroke="#c9a96e" stroke-width="0.5"/>
+    </svg>
+  </div>
 
-      <!-- Your Invitation Content -->
-      <a-text 
-        value="Saran 💍 ❤️\nYou are Invited!"
-        position="0 0.5 0"
-        align="center"
-        color="red">
-      </a-text>
+  <!-- Countdown -->
+  <section class="countdown fade-in-up">
+    <p class="section-label">Counting Down To</p>
+    <h2 class="section-title">Our Wedding Day</h2>
+    <div class="countdown__grid" id="countdown">
+      <div class="countdown__unit">
+        <span class="countdown__num" id="cd-days">00</span>
+        <span class="countdown__label">Days</span>
+      </div>
+      <div class="countdown__sep" aria-hidden="true">:</div>
+      <div class="countdown__unit">
+        <span class="countdown__num" id="cd-hours">00</span>
+        <span class="countdown__label">Hours</span>
+      </div>
+      <div class="countdown__sep" aria-hidden="true">:</div>
+      <div class="countdown__unit">
+        <span class="countdown__num" id="cd-mins">00</span>
+        <span class="countdown__label">Minutes</span>
+      </div>
+      <div class="countdown__sep" aria-hidden="true">:</div>
+      <div class="countdown__unit">
+        <span class="countdown__num" id="cd-secs">00</span>
+        <span class="countdown__label">Seconds</span>
+      </div>
+    </div>
+  </section>
 
-      <!-- Optional 3D object -->
-      <a-box position="0 0 0" color="blue"></a-box>
+  <!-- Divider -->
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 800 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+      <line x1="0" y1="20" x2="320" y2="20" stroke="#c9a96e" stroke-width="0.5"/>
+      <g transform="translate(400,20)" fill="none" stroke="#c9a96e" stroke-width="0.8">
+        <circle cx="-48" cy="0" r="3"/>
+        <circle cx="-30" cy="0" r="4"/>
+        <path d="M-20,0 Q-10,-12 0,-6 Q10,-12 20,0 Q10,12 0,6 Q-10,12 -20,0Z"/>
+        <circle cx="30" cy="0" r="4"/>
+        <circle cx="48" cy="0" r="3"/>
+      </g>
+      <line x1="480" y1="20" x2="800" y2="20" stroke="#c9a96e" stroke-width="0.5"/>
+    </svg>
+  </div>
 
-    </a-marker>
+  <!-- Event Details -->
+  <section class="details fade-in-up">
+    <p class="section-label">Join Us</p>
+    <h2 class="section-title">Ceremony & Reception</h2>
+    <div class="details__cards">
 
-    <a-entity camera></a-entity>
+      <article class="detail-card">
+        <div class="detail-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+          </svg>
+        </div>
+        <h3>Date &amp; Time</h3>
+        <p>Saturday, May 30, 2026</p>
+        <p class="detail-card__accent">Ceremony at 11:00 AM</p>
+        <p>Reception follows at 4:00 PM</p>
+      </article>
 
-  </a-scene>
+      <article class="detail-card detail-card--center">
+        <div class="detail-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+            <path d="M9 21V12h6v9"/>
+          </svg>
+        </div>
+        <h3>The Venue</h3>
+        <p class="detail-card__venue">Rosewood Estate &amp; Gardens</p>
+        <p>1842 Meadow Lane</p>
+        <p>Charleston, South Carolina</p>
+        <a
+          class="map-btn"
+          href="https://www.google.com/maps/search/Rosewood+Estate+Charleston+South+Carolina"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open location in Google Maps"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+            <circle cx="12" cy="9" r="2.5"/>
+          </svg>
+          View on Google Maps
+        </a>
+      </article>
+
+      <article class="detail-card">
+        <div class="detail-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+          </svg>
+        </div>
+        <h3>Dress Code</h3>
+        <p class="detail-card__accent">Garden Formal</p>
+        <p>Soft florals, pastels, and earth tones welcomed</p>
+        <p>Please avoid white &amp; ivory</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__message">We can't wait to celebrate with you</p>
+      <div class="footer__names">Sa &amp; G</div>
+      <p class="footer__date">30 · 05 · 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
