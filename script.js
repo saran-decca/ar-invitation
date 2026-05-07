@@ -5,7 +5,7 @@
 // ── Countdown Timer ───────────────────────
 (function () {
   // ★ Change this date to the actual wedding date/time (local time)
-  const WEDDING_DATE = new Date('2026-05-30T11:00:00');
+  const WEDDING_DATE = new Date('2026-05-30T11:30:00');
 
   const els = {
     days:  document.getElementById('cd-days'),
