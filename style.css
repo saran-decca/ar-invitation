@@ -363,6 +363,27 @@ body {
   color: var(--text-dark) !important;
 }
 
+/* Inline map pin next to reception line */
+.reception-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.inline-map-pin {
+  display: inline-flex;
+  align-items: center;
+  color: var(--gold);
+  transition: color var(--transition), transform var(--transition);
+  flex-shrink: 0;
+}
+.inline-map-pin svg {
+  width: 14px;
+  height: 14px;
+}
+.inline-map-pin:hover {
+  color: var(--gold-dark);
+  transform: translateY(-1px);
+}
 /* Map button */
 .map-btn {
   display: inline-flex;
